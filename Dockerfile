@@ -5,8 +5,8 @@
 # Using my dceschmidt/openvpn-client image as base
 # CMD has been defined in base image
 
-FROM dceschmidt/openvpn-client:latest
-MAINTAINER Diego Schmidt <dceschmidt@gmail.com>
+FROM jdhawk/docker-openvpn-client:latest
+MAINTAINER Dustin Hawkins <jdhawk@dh0.net)
 
 # Evironment variables
 ENV DEBIAN_FRONTEND=noninteractive

@@ -3,7 +3,7 @@ services:
   openvpn-client:
     build: .
     container_name: openvpn-proxy
-    image: dceschmidt/openvpn-proxy
+    image: jdhawk/docker-openvpn-proxy
     privileged: true
     restart: always
     ports:
