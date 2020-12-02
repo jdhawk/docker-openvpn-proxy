@@ -13,14 +13,14 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 ## Update packages and install software
 RUN apt-get update  \
-    && apt-get install -y squid3 \
+    && apt-get install -y squid3 openssh-server\
     && mv -f /etc/squid/squid.conf /etc/squid/squid.conf.original \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD squid/ /etc/squid/
 
 EXPOSE 3128
-EXPOSE 8080
+EXPOSE 1080
 
 RUN chmod +x /etc/squid/squid-*.sh \
     && mkdir -p /etc/service/squid \
