@@ -20,6 +20,7 @@ RUN apt-get update  \
 ADD squid/ /etc/squid/
 
 EXPOSE 3128
+EXPOSE 8080
 
 RUN chmod +x /etc/squid/squid-*.sh \
     && mkdir -p /etc/service/squid \

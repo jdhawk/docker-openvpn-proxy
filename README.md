@@ -13,12 +13,13 @@ $ docker run --privileged  -d \
               -e "OPENVPN_CONFIG=Netherlands" \
               -e "OPENVPN_USERNAME=user" \
               -e "OPENVPN_PASSWORD=pass" \
-              -p 1022:22 \
               -p 3128:3128 \
-              dceschmidt/openvpn-proxy
+              -p 8080:8080 \
+              jdhawk/docker-openvpn-proxy
 ```
 
-Now you can connect your application to a proxy `localhost:3128`.
+Now you can connect your application to a HTTP proxy `localhost:3128`.
+Now you can connect your application to a SOCKS5 proxy `localhost:8080`.
 
 
 ## OpenVPN configuration
